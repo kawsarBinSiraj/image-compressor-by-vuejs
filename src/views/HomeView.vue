@@ -26,7 +26,8 @@ function onDrop(files, rejectReasons) {
 
     new Compressor(selectedFile, {
         quality: imgQuality.value / 10,
-
+        convertTypes: ["image/jpg", "image/png", "image/jpeg"],
+        convertSize: Infinity,
         // The compression process is asynchronous,
         // which means you have to access the `result` in the `success` hook function.
         success(result) {
